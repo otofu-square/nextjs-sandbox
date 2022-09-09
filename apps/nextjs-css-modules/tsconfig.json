@@ -1,0 +1,22 @@
+{
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "moduleResolution": "node",
+    "incremental": true,
+    "noEmit": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "paths": {
+      "~/*": ["./*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.conifg.mjss"]
+}

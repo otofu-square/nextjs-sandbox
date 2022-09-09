@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "name": "nextjs-css-linaria",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "linaria": "4.1.3",
+    "next": "12.2.5",
+    "next-linaria": "0.11.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "1.0.1",
+    "@types/node": "18.7.15",
+    "@types/react": "18.0.18",
+    "@types/react-dom": "18.0.6",
+    "typescript": "4.8.2"
+  }
+}
