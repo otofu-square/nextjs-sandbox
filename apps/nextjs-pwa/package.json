@@ -2,7 +2,7 @@
   "private": true,
   "name": "nextjs-pwa",
   "scripts": {
-    "dev": "next dev",
+    "dev": "open http://localhost:3000 && next dev",
     "build": "next build",
     "start": "next start"
   },

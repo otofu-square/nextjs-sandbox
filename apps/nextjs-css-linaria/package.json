@@ -2,10 +2,9 @@
   "private": true,
   "name": "nextjs-css-linaria",
   "scripts": {
-    "dev": "next dev",
+    "dev": "open http://localhost:3000 && next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
     "linaria": "4.1.3",

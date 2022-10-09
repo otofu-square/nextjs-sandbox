@@ -1,8 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    concurrentFeatures: true,
-  },
-};
+const withPWA = require("next-pwa")({ dest: "public" });
 
-module.exports = nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
+
+module.exports = withPWA(nextConfig);
