@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "moduleResolution": "nodenext",
+    "target": "ESNext",
+    "module": "ESNext",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "incremental": true,
+    "noPropertyAccessFromIndexSignature": false
+  },
+  "include": [],
+  "exclude": ["node_modules", "dist"]
+}

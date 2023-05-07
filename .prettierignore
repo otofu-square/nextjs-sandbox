@@ -1,1 +1,6 @@
+.eslintrc.js
+.next
+out
+dist
+__generated__
 storybook-static

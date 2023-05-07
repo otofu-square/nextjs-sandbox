@@ -1,16 +1,6 @@
 {
   "private": true,
   "name": "nextjs-sandbox",
-  "packageManager": "yarn@3.2.3",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{css,scss,md,html}": [
       "prettier --write"
@@ -22,21 +12,25 @@
   },
   "scripts": {
     "lint": "run-p -lc --aggregate-output 'lint:*'",
+    "lint:tsc": "pnpm -r tsc",
     "lint:eslint": "eslint --cache './**/*.{js,jsx,ts,tsx}'",
     "lint:prettier": "prettier --check './**/*.{js,jsx,ts,tsx,css,scss}'",
-    "fix": "run-s fix:prettier fix:eslint",
-    "fix:eslint": "yarn lint:eslint --fix",
-    "fix:prettier": "yarn lint:prettier --write",
+    "format": "run-s format:prettier format:eslint",
+    "format:eslint": "pnpm lint:eslint --fix",
+    "format:prettier": "pnpm lint:prettier --write",
+    "gen:package": "./scripts/init-package.sh",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "eslint": "8.25.0",
+    "@tsconfig/strictest": "2.0.1",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.1",
     "eslint-config-timetree": "1.8.0",
-    "eslint-plugin-storybook": "0.6.4",
-    "husky": "8.0.1",
-    "lint-staged": "13.0.3",
+    "eslint-plugin-storybook": "0.6.12",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.2",
     "npm-run-all": "4.1.5",
-    "prettier": "2.7.1",
-    "typescript": "4.8.4"
+    "prettier": "2.8.8",
+    "typescript": "5.0.4"
   }
 }
